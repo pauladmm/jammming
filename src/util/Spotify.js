@@ -1,3 +1,4 @@
+
 const clientId = 'ce029eeb824742b0af46cc0f3dcc8145';
 const redirectUri = 'https://jam-projectcode.surge.sh/';
 let accessToken;
