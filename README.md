@@ -1,3 +1,4 @@
+
 # :headphones: Create a Playlist App With The Spotify API :headphones: Codecademy Project
 This is a project from the Full-Stack Engineer Path (https://www.codecademy.com/career-journey/full-stack-engineer)
 
