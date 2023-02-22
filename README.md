@@ -1,71 +1,54 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# :headphones: Create a Playlist App With The Spotify API :headphones: Codecademy Project
+This is a project from the Full-Stack Engineer Path (https://www.codecademy.com/career-journey/full-stack-engineer)
 
-## Available Scripts
+## Overview
+### Project description
+Create a web application that allows users to search the Spotify library, create custom playlist, then save it to their Spotify account.
 
-In the project directory, you can run:
+Built with:
+- React (https://create-react-app.dev/)
+- node.js
+- VS Code
+  
+Deployed with surge (https://surge.sh/)
 
-### `npm start`
+Link: http://jam-pauladmm.surge.sh/
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### What I learnt
+Through this projects I learnt more about create **Stateful and Stateless Components** (eg. SearchBar vs SearchResults), **pass down Components** to render them (eg. render tracklists), adding features with **Event Handlers**, create **Methods** (eg. a Method that saves the Playlist to a User's Account)...
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Also, I dived in Authenticate a User and Get Authorization to Access User Data (*access_token*, *client_id*, *redirect_uri*) and retrieve data from a Web API Endpoint (searching tracks).
 
-### `npm test`
+Personally, it has supposed a challenge for me due to it is the first time I create a React App, and I have had to unify a lot of knowledge that until now I had learnt separately. I have had to do a lot of rearch when the app didn't work and couldn't barely know why. But along the way, I have to admit I discovered things that were not in the 'to-do list' of the project.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Current state
+I found I have a problem in CLIENT_ID credential when I authenticate. I tried to modify the URL because I realised that in the url link the client_id and the redirect_uri aren't updated.
 
-### `npm run build`
+This is the link that thows the error:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+*https://accounts.spotify.com/authorize?client_id=c422646b47db4997ad5297e99d1d22e0&response_type=token&scope=playlist-modify-public&redirect_uri=http://localhost:3000/*
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+When the correct link should be:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+*https://accounts.spotify.com/authorize?client_id={myRealClientId}0&response_type=token&scope=playlist-modify-public&redirect_uri=http://jam-pauladmm.surge.sh/*
 
-### `npm run eject`
+I tried to copy and paste several times the client_id and update the redirect_uri, delete and create the app again, even surge a couple times with other domains.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+After I have think about it, maybe I would try two more things:
+1. Try another kind of authorization (this one is done carried out on the client side; Implicit Grant Flow (https://developer.spotify.com/documentation/general/guides/authorization/implicit-grant/))
+2. Try another music API and restructuring the whole App.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### Part Two
+In the part two of this Projects, I will work on potential features to this App as:
+- Including preview samples for each track
+- Add a loading screen while playlist is saving
+- Afeter user redirect on login, restoring the search term from before the redirect
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Part of this 'Part Two' includes a technical desing document with: Objectives, Background, Technical Design and Caveats.
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Author :art:
+Paula del Moral (pauladmm.github.io)
 
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-# sandbox
