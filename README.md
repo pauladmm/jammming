@@ -1,17 +1,17 @@
 
 # :headphones: Create a Playlist App With The Spotify API :headphones: Codecademy Project
-This is a project from the Full-Stack Engineer Path (https://www.codecademy.com/career-journey/full-stack-engineer)
+This is a project from the [Full-Stack Engineer Path](https://www.codecademy.com/career-journey/full-stack-engineer)
 
 ## Overview
 ### Project description
 Create a web application that allows users to search the Spotify library, create custom playlist, then save it to their Spotify account.
 
 Built with:
-- React (https://create-react-app.dev/)
+- [React](https://create-react-app.dev/)
 - node.js
 - VS Code
   
-Deployed with surge (https://surge.sh/)
+Deployed with [surge](https://surge.sh/)
 
 Link: http://jam-pauladmm.surge.sh/
 
@@ -36,7 +36,7 @@ When the correct link should be:
 I tried to copy and paste several times the client_id and update the redirect_uri, delete and create the app again, even surge a couple times with other domains.
 
 After I have think about it, maybe I would try two more things:
-1. Try another kind of authorization (this one is done carried out on the client side; Implicit Grant Flow (https://developer.spotify.com/documentation/general/guides/authorization/implicit-grant/))
+1. Try another kind of authorization (this one is done carried out on the client side; [Implicit Grant Flow](https://developer.spotify.com/documentation/general/guides/authorization/implicit-grant/))
 2. Try another music API and restructuring the whole App.
 
 
@@ -50,5 +50,5 @@ Part of this 'Part Two' includes a technical desing document with: Objectives, B
 
 
 ## Author :art:
-Paula del Moral (pauladmm.github.io)
+[Paula del Moral](pauladmm.github.io)
 
